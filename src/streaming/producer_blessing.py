@@ -217,7 +217,7 @@ def send_messages() -> int:
 
             key = get_message_key(message)
             LOG.info(f"  Sending local message with key={key}")
-
+            message["processed_by"] = "Blessing"
             send_local_message(message)
 
             sent_count += 1
